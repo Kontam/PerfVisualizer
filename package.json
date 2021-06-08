@@ -38,6 +38,7 @@
     "eslint": "^7.28.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "hygen": "^6.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
     "jest-dom": "^4.0.0",
