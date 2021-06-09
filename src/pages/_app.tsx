@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import 'tailwindcss/tailwind.css';
+//import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
 import { useStore } from '../redux/store';
 
 function MyApp({ Component, pageProps }) {
