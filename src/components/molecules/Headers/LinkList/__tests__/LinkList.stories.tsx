@@ -19,5 +19,5 @@ const data = [
   { id: 3, name: 'Improve your customer experience', href: '#' },
 ];
 
-export const Default = Template.bind({});
+export const Default: Story<Props> = Template.bind({});
 Default.args = { links: data };
