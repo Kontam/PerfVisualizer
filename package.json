@@ -8,6 +8,7 @@
     "start": "next start",
     "lint:fix": "eslint ./src --fix && prettier ./src --write",
     "new:component": "hygen component new",
+    "new:redux:module": "hygen redux module",
     "test": "npx jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
