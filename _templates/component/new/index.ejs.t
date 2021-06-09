@@ -1,13 +1,13 @@
 ---
 to: <%= component%>/index.tsx 
 ---
-
 import React from 'react';
+import ComponentBase from './<%= component%>';
 
-type Props = {};
-
-const <%= component%>: React.FC<Props> = (props) => {
-  return (<div>content</div>);
+const <%= component%>: React.FC = () => {
+  return (
+    <ComponentBase />
+  );
 };
 
 export default <%= component%>;
