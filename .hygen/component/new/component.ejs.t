@@ -1,10 +1,10 @@
 ---
-to: <%= component%>/<%= component%>.tsx 
+to: <%= path%>/<%= component%>/<%= component%>.tsx 
 ---
 
 import React from 'react';
 
-type Props = {};
+export type Props = {};
 
 const <%= component%>: React.FC<Props> = (props) => {
   return (

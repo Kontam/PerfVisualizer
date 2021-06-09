@@ -1,5 +1,5 @@
 ---
-to: <%= component%>/index.tsx 
+to: <%= path%>/<%= component%>/index.tsx 
 ---
 import React from 'react';
 import ComponentBase from './<%= component%>';
