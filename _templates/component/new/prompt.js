@@ -4,7 +4,7 @@
 module.exports = [
   {
     type: 'input',
-    name: 'message',
-    message: "What's your message?"
+    name: 'component',
+    message: "What's your component?"
   }
 ]
