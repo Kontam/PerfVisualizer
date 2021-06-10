@@ -9,10 +9,10 @@ export const INITIAL_STATE = [{}];
 <% actions.forEach((action) => {-%>
 const <%= action  %> = '<%= action%>';
 <% });-%>
- 
+
 <% actions.forEach((action) => {-%>
 export const <%= h.inflection.camelize(action.toLowerCase(), true) %> = createAction(<%= action%>);
-<% });-%> 
+<% });-%>
 
 export const <%= module%> = handleActions<any>(
   {
@@ -20,7 +20,7 @@ export const <%= module%> = handleActions<any>(
     ['<%= action%>']: () => {
       return {};
     },
-<% });-%> 
+<% });-%>
   },
   INITIAL_STATE
 );
