@@ -1,14 +1,10 @@
 import React from 'react';
 import Graph from '../../molecules/Graph';
 
-type Props = {
-  graphs: any[];
-};
-
-const ChartList: React.FC<Props> = (props) => {
+const ChartList: React.FC = () => {
   return (
     <div>
-      <Graph data={props.graphs[0]} />
+      <Graph />
     </div>
   );
 };

@@ -9,14 +9,14 @@ const Chart: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
     useGlobalState(props.datasets);
     return (
       <div>
-        <ChartList graphs={props.graphs} />
+        <ChartList />
       </div>
     );
   };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { graphs, datasets } = useGraph();
-  return { props: { graphs, datasets } };
+  const datasets = useGraph();
+  return { props: { datasets } };
 };
 
 export default Chart;
