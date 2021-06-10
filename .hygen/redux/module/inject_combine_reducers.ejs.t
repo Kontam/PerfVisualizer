@@ -1,7 +1,7 @@
 ---
 inject: true
 to: src/redux/reducers.ts
-after: const reducers = combineReducers
+after: "<%= section ? section : `const reducers = combineReducers`%>"
 skip_if: <%= module%>,
 ---
-  <%= module%>,
+<%= section ? `    ${module}` : `  ${module}`%>,

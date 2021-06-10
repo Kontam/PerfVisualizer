@@ -7,6 +7,11 @@ module.exports = {
         message: "What's your module?",
       },
       {
+        type: 'input',
+        name: 'section',
+        message: "Whitch section of state?(can be empty)",
+      },
+      {
         type: 'list',
         name: 'actions',
         message: "Type comma-separated actions (capital and snake-cased):",
