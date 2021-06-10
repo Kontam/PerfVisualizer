@@ -4,7 +4,7 @@ import { DataSet } from '../../components/types';
 
 export const INITIAL_STATE: Pages = [];
 
-const SUCCESS_GET_DATA = 'SUCCESS_GET_DATA';
+export const SUCCESS_GET_DATA = 'SUCCESS_GET_DATA';
 
 export const successGetData = createAction<DataSet[]>(SUCCESS_GET_DATA);
 

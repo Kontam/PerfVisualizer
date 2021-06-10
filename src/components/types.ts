@@ -1,5 +1,5 @@
 import json from '../../static/sample.json';
-export type Info = {
+export type TrackingInfo = {
   hash: string;
   date: string;
   data: TrackingData;
@@ -8,7 +8,7 @@ export type Info = {
 export type DataSet = {
   id: string;
   name: string;
-  info: Info[];
+  info: TrackingInfo[];
 };
 
 export type TrackingData = {
