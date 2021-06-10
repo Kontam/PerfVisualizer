@@ -3,10 +3,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
 import reducers from './reducers';
+import { RootState } from './types';
 
 let store;
 
-function initStore(initialState) {
+function initStore(initialState: RootState) {
   return createStore(
     reducers,
     initialState,

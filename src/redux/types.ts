@@ -15,3 +15,15 @@ export type Pages = Page[];
 
 export type Category = { name: 'Performance' };
 export type Categories = Category[];
+
+export type RootState = {
+  data: {
+    pages: Pages;
+    lighthouse: Lighthouse;
+  };
+};
+
+declare module 'react-redux' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultRootState extends RootState {}
+}
