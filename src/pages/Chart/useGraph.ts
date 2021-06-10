@@ -1,9 +1,9 @@
 import { getDataSet } from '../../util/getDataSet';
 
 export function useGraph() {
-  const dataset = getDataSet();
+  const datasets = getDataSet();
 
-  const graphs = dataset.map((data) => ({
+  const graphs = datasets.map((data) => ({
     labels: [...data.info.map((d) => d.hash)],
     datasets: [
       {
@@ -13,5 +13,5 @@ export function useGraph() {
     ],
   }));
 
-  return graphs;
+  return { graphs, datasets };
 }

@@ -14,6 +14,7 @@ export function getDataSet() {
     const data = getDataFromJson(path);
     if (!datasets.some((data) => data.name === match[1])) {
       datasets.push({
+        id: `${match[1]}${match[2]}${match[3]}`,
         name: match[1],
         info: [{ hash: match[2], date: match[3], data }],
       });

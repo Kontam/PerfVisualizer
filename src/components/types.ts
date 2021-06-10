@@ -6,6 +6,7 @@ export type Info = {
 };
 
 export type DataSet = {
+  id: string;
   name: string;
   info: Info[];
 };
