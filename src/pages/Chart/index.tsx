@@ -17,7 +17,7 @@ const Chart: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
     );
   };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const datasets = useGraph();
   return { props: { datasets } };
 };

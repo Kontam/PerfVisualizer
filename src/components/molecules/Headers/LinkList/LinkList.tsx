@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeaderLink } from '../../../types';
+import Link from 'next/link';
 
 export type Props = {
   links: HeaderLink[];
@@ -15,12 +16,11 @@ const LinkList: React.FC<Props> = (props) => {
         <ul className="mt-4 space-y-4">
           {props.links.map((link) => (
             <li key={link.id} className="text-base truncate">
-              <a
-                href={link.href}
-                className="font-medium text-gray-900 hover:text-gray-700"
-              >
-                {link.name}
-              </a>
+              <Link href={link.href} passHref>
+                <a className="font-medium text-gray-900 hover:text-gray-700">
+                  {link.name}
+                </a>
+              </Link>
             </li>
           ))}
         </ul>

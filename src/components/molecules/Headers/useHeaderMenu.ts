@@ -5,7 +5,7 @@ export function useHeaderMenu(props: Props) {
   const pageLinks: HeaderLink[] = props.pages.map((page) => ({
     id: page.dataId,
     name: page.name,
-    href: '#',
+    href: `Chart?page=${page.name}`,
   }));
   const largePageLinks: LargeHeaderLink[] = [];
 

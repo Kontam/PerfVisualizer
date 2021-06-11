@@ -27,18 +27,6 @@ const HeadersBase: React.FC<Props> = (props) => {
             </a>
           </div>
           <Popover.Group as="nav" className="flex space-x-10">
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Pricing
-            </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Docs
-            </a>
             <PopoverItem
               openerLabel="Pages"
               links={pageLinks}
