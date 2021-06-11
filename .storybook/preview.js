@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux';
+import { useStore } from '../src/redux/store';
 import '../src/styles/globals.css';
 
 export const parameters = {
@@ -9,3 +11,14 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+    (Story) => {
+      const store = useStore();
+      return (
+        <Provider store={store}>
+          <Story />
+        </Provider>
+      );
+    },
+  ];

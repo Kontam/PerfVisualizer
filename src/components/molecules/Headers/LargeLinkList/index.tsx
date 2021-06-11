@@ -1,7 +1,7 @@
 import React from 'react';
 import { LargeHeaderLink } from '../../../types';
 
-type Props = {
+export type Props = {
   largeLinks: LargeHeaderLink[];
 };
 
@@ -27,3 +27,5 @@ export const LargeLinkList: React.FC<Props> = (props) => {
     </div>
   );
 };
+
+export default LargeLinkList;
