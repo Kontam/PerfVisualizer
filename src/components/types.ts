@@ -17,4 +17,18 @@ export type TrackingData = {
   };
 };
 
+export type HeaderLink = {
+  id: string;
+  name: string;
+  href: string;
+};
+
+export type LargeHeaderLink = {
+  id: string;
+  name: string;
+  description: string;
+  href: string;
+  icon: (arg: any) => JSX.Element;
+};
+
 export type FileData = typeof json;

@@ -1,13 +1,14 @@
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
+import { HeaderLink, LargeHeaderLink } from '../../../types';
 import { LargeLinkList } from '../LargeLinkList';
 import LinkList from '../LinkList/LinkList';
 
 type Props = {
   openerLabel: string;
-  links: any[];
-  largeLinks: any[];
+  links: HeaderLink[];
+  largeLinks: LargeHeaderLink[];
 };
 
 function classNames(...classes) {

@@ -1,7 +1,8 @@
 import React from 'react';
+import { LargeHeaderLink } from '../../../types';
 
 type Props = {
-  largeLinks: any[];
+  largeLinks: LargeHeaderLink[];
 };
 
 export const LargeLinkList: React.FC<Props> = (props) => {

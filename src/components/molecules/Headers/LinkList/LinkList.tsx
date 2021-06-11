@@ -1,7 +1,8 @@
 import React from 'react';
+import { HeaderLink } from '../../../types';
 
 export type Props = {
-  links: any[];
+  links: HeaderLink[];
 };
 
 const LinkList: React.FC<Props> = (props) => {
