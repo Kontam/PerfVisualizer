@@ -1,13 +1,15 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import React from 'react';
 import ChartList from '../../components/organisms/ChartList';
-import { useGraph } from './useGraph';
-import { useGlobalState } from './useGlobalState';
 import ChartTemplate from '../../components/templates/ChartTemplate/ChartTemplate';
+import { getDataSet } from '../../util/getDataSet';
+import { useDispatch } from 'react-redux';
+import { successGetData } from '../../redux/modules/pages';
 
 const Chart: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
   (props) => {
-    useGlobalState(props.datasets);
+    const dispatch = useDispatch();
+    dispatch(successGetData(props.datasets));
     return (
       <div>
         <ChartTemplate>
@@ -18,7 +20,7 @@ const Chart: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
   };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const datasets = useGraph();
+  const datasets = getDataSet();
   return { props: { datasets } };
 };
 

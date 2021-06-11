@@ -4,7 +4,7 @@ import { useLineChart } from './useLineChart';
 
 const Graph: React.FC = () => {
   const chartProps = useLineChart();
-  return <Line data={chartProps.data} />;
+  return <Line type="line" data={chartProps.data} />;
 };
 
 export default Graph;
