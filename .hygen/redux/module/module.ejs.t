@@ -1,7 +1,7 @@
 ---
 to: src/redux/modules/<%= module%>.ts 
 ---
-<% const typeName= h.inflection.capitalize(module);-%>
+<% const typeName= h.inflection.classify(module);-%>
 import { createAction, handleActions } from 'redux-actions';
 import { <%= typeName%> } from '../types';
 
