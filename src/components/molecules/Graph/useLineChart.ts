@@ -16,20 +16,20 @@ export function useLineChart() {
   const chartProps: React.ComponentProps<typeof Line> = {
     type: 'line',
     data: {
-      labels: [...currentGraphData.datas.map((item) => item.date)],
+      labels: [...currentGraphData.datas.map((item) => item.hash)],
       datasets: [
         {
-          label: [...currentGraphData.datas.map((item) => item.date)],
+          label: [currentGraphData.name],
           data: [
             ...currentGraphData.datas.map(
               (item) => item.data.performance.score
             ),
           ],
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1,
         },
       ],
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgba(255, 99, 132, 1)',
-      borderWidth: 1,
     },
   };
 
