@@ -4,7 +4,11 @@ import { useLineChart } from './useLineChart';
 
 const Graph: React.FC = () => {
   const chartProps = useLineChart();
-  return <Line type="line" data={chartProps.data} />;
+  return (
+    <div className="max-w-80p">
+      <Line type="line" data={chartProps.data} />
+    </div>
+  );
 };
 
 export default Graph;

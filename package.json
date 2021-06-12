@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint:fix": "eslint ./src --fix && prettier ./src --write",
+    "typecheck": "tsc --noEmit",
     "new:component": "hygen component new",
     "new:redux:module": "hygen redux module",
     "test": "npx jest",

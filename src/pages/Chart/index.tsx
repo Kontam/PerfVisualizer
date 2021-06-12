@@ -11,11 +11,9 @@ const Chart: React.FC<InferGetServerSidePropsType<typeof getServerSideProps>> =
     const dispatch = useDispatch();
     dispatch(successGetData(props.datasets));
     return (
-      <div>
-        <ChartTemplate>
-          <ChartList />
-        </ChartTemplate>
-      </div>
+      <ChartTemplate>
+        <ChartList />
+      </ChartTemplate>
     );
   };
 

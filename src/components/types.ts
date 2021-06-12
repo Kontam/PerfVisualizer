@@ -22,7 +22,7 @@ export type HeaderLink = {
   id: string;
   name: string;
   href?: string;
-  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
+  handleClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 export type LargeHeaderLink = {
@@ -30,7 +30,7 @@ export type LargeHeaderLink = {
   name: string;
   description: string;
   href?: string;
-  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
+  handleClick?: React.MouseEventHandler<HTMLAnchorElement>;
   icon: (arg: any) => JSX.Element;
 };
 
