@@ -11,7 +11,10 @@ export const LargeLinkList: React.FC<Props> = (props) => {
     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
       {props.largeLinks.map((item) => (
         <Link href={item.href} passHref key={item.name}>
-          <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+          <a
+            onClick={item.handleClick}
+            className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+          >
             <item.icon
               className="flex-shrink-0 h-6 w-6 text-indigo-600"
               aria-hidden="true"

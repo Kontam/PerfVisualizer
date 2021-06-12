@@ -1,13 +1,15 @@
 // From tailwind UI https://tailwindui.com/components/marketing/elements/headers
 /* This example requires Tailwind CSS v2.0+ */
-import React from 'react';
+import React, { Dispatch } from 'react';
 import { Popover } from '@headlessui/react';
 import { useHeaderMenu } from './useHeaderMenu';
 import PopoverItem from './PopoverItem';
 import { Pages } from '../../../redux/types';
+import { Action } from 'redux-actions';
 
 export type Props = {
   pages: Pages;
+  dispatch?: Dispatch<Action<any>>;
 };
 
 const HeadersBase: React.FC<Props> = (props) => {

@@ -1,17 +1,16 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { mergeByProperty } from '../../../util/mergeByProperty';
 
 export function useLineChart() {
   const lighthouse = useSelector((state) => state.data.lighthouse);
   const pages = useSelector((state) => state.data.pages);
+  const currentChart = useSelector((state) => state.app.currentChart);
   const merged = mergeByProperty(lighthouse, pages, 'dataId');
-  const { query } = useRouter();
 
-  const currentGraphData = query.page
-    ? merged.find((data) => data.name === query.page) || merged[0]
+  const currentGraphData = currentChart.page
+    ? merged.find((data) => data.name === currentChart.page) || merged[0]
     : merged[0];
 
   const chartProps: React.ComponentProps<typeof Line> = {

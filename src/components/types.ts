@@ -1,3 +1,4 @@
+import React from 'react';
 import json from '../../static/sample.json';
 export type TrackingInfo = {
   hash: string;
@@ -20,14 +21,16 @@ export type TrackingData = {
 export type HeaderLink = {
   id: string;
   name: string;
-  href: string;
+  href?: string;
+  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 export type LargeHeaderLink = {
   id: string;
   name: string;
   description: string;
-  href: string;
+  href?: string;
+  handleClick: React.MouseEventHandler<HTMLAnchorElement>;
   icon: (arg: any) => JSX.Element;
 };
 
