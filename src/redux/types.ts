@@ -1,6 +1,11 @@
 import { TrackingInfo } from '../components/types';
 
 // module types
+export type CurrentChart = {
+  page: string;
+  categoery: string;
+};
+
 export type LighthouseItem = {
   dataId: string;
   datas: TrackingInfo[];

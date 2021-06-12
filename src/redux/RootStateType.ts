@@ -1,11 +1,15 @@
 // prettier-ignore
 import {
+  CurrentChart,
   Pages,
   Lighthouse,
 } from './types';
 
 // hygenでinjectするため一番上に定義する
 export type RootState = {
+  app: {
+    currentChart: CurrentChart;
+  };
   data: {
     pages: Pages;
     lighthouse: Lighthouse;

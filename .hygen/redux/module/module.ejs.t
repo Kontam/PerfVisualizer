@@ -5,7 +5,7 @@ to: src/redux/modules/<%= module%>.ts
 import { createAction, handleActions } from 'redux-actions';
 import { <%= typeName%> } from '../types';
 
-export const INITIAL_STATE: <%= typeName%> = [{}];
+export const INITIAL_STATE: <%= typeName%> = {};
 
 <% actions.forEach((action) => {-%>
 const <%= action  %> = '<%= action%>';
