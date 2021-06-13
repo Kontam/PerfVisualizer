@@ -11,6 +11,7 @@
     "new:component": "hygen component new",
     "new:redux:module": "hygen redux module",
     "collect": "ts-node --project tsconfig.node.json collector/src/withGit.ts",
+    "collect:init": "ts-node --project tsconfig.node.json collector/src/init.ts",
     "test": "npx jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
