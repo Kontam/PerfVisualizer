@@ -1,0 +1,6 @@
+node:
+  container_name: "perfv-node"
+  build: .
+  ports:
+    - "4000:3000"
+  tty: true
