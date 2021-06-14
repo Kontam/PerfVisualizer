@@ -1,4 +1,3 @@
-
 /*
 import * as fs from 'fs';
 import * as lighthouse from 'lighthouse';
@@ -9,14 +8,15 @@ const fs = require('fs');
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 
-
 export async function runLightHouse(
   url: string,
   filename: string,
   dir = '.'
 ): Promise<void> {
   try {
-    const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
+    const chrome = await chromeLauncher.launch({
+      chromeFlags: ['--headless', '--no-sandbox'],
+    });
     const options = {
       logLevel: 'info',
       output: 'json',

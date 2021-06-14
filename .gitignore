@@ -34,3 +34,7 @@ yarn-error.log*
 .vercel
 
 *.swp
+
+collector/config.json
+collector/target.json
+static/data
