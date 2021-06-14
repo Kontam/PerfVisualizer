@@ -41,5 +41,6 @@ const CONFIG_DIR = 'collector';
         `${distDir}/${t.name}`
       );
   });
-  synchronous(promises);
+  await synchronous(promises);
+  return;
 })();

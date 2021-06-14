@@ -1,8 +1,7 @@
 export function synchronous(asyncFuncs: Array<() => Promise<any>>) {
-  asyncFuncs.reduce <
-    Promise<any>>((acc, cur) => {
-      return acc.then(cur);
-    }, Promise.resolve());
+  return asyncFuncs.reduce<Promise<any>>((acc, cur) => {
+    return acc.then(cur);
+  }, Promise.resolve());
 }
 
 /*

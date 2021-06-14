@@ -35,6 +35,8 @@ export async function runLightHouse(
       'Performance score was',
       runnerResult.lhr.categories.performance.score * 100
     );
+    await chrome.kill();
+    return;
   } catch (e) {
     console.error(e);
   }
